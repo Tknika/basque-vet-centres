@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Tknika": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.8988698720932005,
+          43.291915715216184
+        ]
+      }
+    }
+  ]
+}
