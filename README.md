@@ -1,4 +1,4 @@
-## Basque VT centres map
+## Basque VET centres map
 
 __Euskara__
 
