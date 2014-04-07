@@ -1,7 +1,17 @@
-Get coordinates from direction:
-http://maps.google.com
-http://www.gps-coordinates.net
+GET COORDINATES FROM DIRECTION:
 
-Get GEOJSON from CSV:
-http://shancarter.github.io/mr-data-converter
+http://maps.google.com
+1- Right-click a location on the map
+2- Select "What's here?"
+3- Under the search box, an info card with coordinates will appear
+
+More info: https://support.google.com/maps/answer/18539?hl=en
+
+
+
+
+GET GEOJSON FROM CSV:
+
 http://togeojson.com
+1- Save ODS file as a CSV comma separated file
+2- Copypaste the content on ToGeoJson
