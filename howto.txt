@@ -1,0 +1,7 @@
+Get coordinates from direction:
+http://maps.google.com
+http://www.gps-coordinates.net
+
+Get GEOJSON from CSV:
+http://shancarter.github.io/mr-data-converter
+http://togeojson.com
