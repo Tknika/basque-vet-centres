@@ -21,7 +21,7 @@
 <script>
 var url = 'https://api.github.com/repos/Tknika/basque-vet-centres/contents/basque-vet-centres.geojson';
 
-var map = L.mapbox.map('map', 'examples.map-h67hf2ic')
+var map = L.mapbox.map('map', 'xezpeleta.hnm05f9d')
   .setView([43.2312, -2.2], 9);
 
 function load() {
@@ -38,11 +38,20 @@ function load() {
     success: function(geojson) {
         // On success add fetched data to the map.
         L.mapbox.featureLayer(geojson).addTo(map);
+        
+        map.featureLayer.setGeoJSON(geojson);
+        map.featureLayer.on('mouseover', function(e) {
+        	e.layer.openPopup();
+        });
+        map.featureLayer.on('mouseout', function(e) {
+        	e.layer.closePopup();
+        });
     }
   });
 }
 
 $(load);
+
 </script>
 
 </body>
