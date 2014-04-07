@@ -1,3 +1,3 @@
 ## Basque VET centres map
 
-[![ScreenShot](https://raw.github.com/Tknika/basque-vet-centres/master/resources/vet-centres-screenshot.png)](https://render.githubusercontent.com/view/geojson?url=https%3A%2F%2Fraw.github.com%2FTknika%2Fbasque-vet-centres%2Fmaster%2Fbasque-vet-centres.geojson)
+[![ScreenShot](https://raw.github.com/Tknika/basque-vet-centres/master/resources/vet-centres-screenshot.png)](http://htmlpreview.github.io/?https://github.com/Tknika/basque-vet-centres/blob/master/map.html)
