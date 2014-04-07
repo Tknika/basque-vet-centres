@@ -1,9 +1,3 @@
 ## Basque VET centres map
 
-__Euskara__
-
-EAEko Lanbide Heziketako ikastetxeen zerrenda
-
-__Castellano__
-
-Lista de Centros de Formación Profesional de la CAV
+[![ScreenShot](https://raw.github.com/Tknika/basque-vet-centres/master/resources/vet-centres-screenshot.png)](https://render.githubusercontent.com/view/geojson?url=https%3A%2F%2Fraw.github.com%2FTknika%2Fbasque-vet-centres%2Fmaster%2Fbasque-vet-centres.geojson)
