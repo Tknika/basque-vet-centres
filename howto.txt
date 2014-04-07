@@ -15,3 +15,8 @@ GET GEOJSON FROM CSV:
 http://togeojson.com
 1- Save ODS file as a CSV comma separated file
 2- Copypaste the content on ToGeoJson
+
+
+FORMATTING AND TESTING GEOJSON FILE:
+
+http://jsonformatter.curiousconcept.com
