@@ -18,11 +18,12 @@
 <div id='map'></div>
 <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
 
+
 <script>
 var url = 'https://api.github.com/repos/Tknika/basque-vet-centres/contents/basque-vet-centres.geojson';
 
 var map = L.mapbox.map('map', 'xezpeleta.hnm05f9d')
-  .setView([43.2312, -2.2], 10);
+  .setView([43.1412, -2.4], 10);
 
 function load() {
   // Fetch just the contents of a .geojson file from GitHub by passing
@@ -36,9 +37,43 @@ function load() {
     dataType: 'json',
     url: url,
     success: function(geojson) {
+    	
+    	map.featureLayer.on('layeradd', function(e) {
+    		var marker = e.layer,
+    			feature = marker.feature;
+    		
+    		// Trying to remove "alt" => it doesn't work
+    		marker.title = 'asdf';
+    		marker.alt = 'adsf';
+    		
+    		// Size depending on "ciclos"
+    		var size = 10;
+    		if (feature.properties.ciclos >= 4) size=15;
+    		if (feature.properties.ciclos >= 7) size=20;
+    		if (feature.properties.ciclos >= 10) size=25;
+    		if (feature.properties.ciclos >= 15) size=30;
+    		if (feature.properties.ciclos >= 25) size=35;
+    		
+    		// Icons from mapbox API: https://www.mapbox.com/developers/api/static/#markers
+    		var redicon = {
+    			"iconUrl": "http://api.tiles.mapbox.com/v3/marker/pin-l-building+f44.png",
+    			"iconSize": [size, size*3-size/2]
+    		}
+    		
+    		var blueicon = {
+    			"iconUrl": "http://api.tiles.mapbox.com/v3/marker/pin-l-building+3AF.png",
+    			"iconSize": [size, size*3-size/2]
+    		}
+    		
+    		if (feature.properties.centro_dependencia == "HEZKUNTZA SAILA") marker.setIcon(L.icon(redicon));
+    		if (feature.properties.centro_dependencia == "BESTE PUBLIKO") marker.setIcon(L.icon(redicon));
+    		if (feature.properties.centro_dependencia == "PRIBATUA") marker.setIcon(L.icon(blueicon));
+    	});
+    	
         // On success add fetched data to the map.
-        L.mapbox.featureLayer(geojson).addTo(map);
+        //L.mapbox.featureLayer(geojson).addTo(map);
         map.featureLayer.setGeoJSON(geojson);
+        
 
         map.featureLayer.on('mouseover', function(e) {
 			var content = '<p><b>' + e.layer.feature.properties.title + '</b><br />Zikloak: ' + e.layer.feature.properties.ciclos + '</p>';
