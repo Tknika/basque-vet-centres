@@ -1,5 +1,10 @@
-GET COORDINATES FROM DIRECTION:
+VET CENTRES:
+http://www.hezkuntza.ejgv.euskadi.net/r43-2638/eu/contenidos/informacion/red_cemtros_fp/es_2019/redcentrosfp_c.html
+https://www.educacion.gob.es/centros/buscar.do
 
+
+
+GET COORDINATES FROM DIRECTION:
 http://maps.google.com
 1- Right-click a location on the map
 2- Select "What's here?"
@@ -11,12 +16,10 @@ More info: https://support.google.com/maps/answer/18539?hl=en
 
 
 GET GEOJSON FROM CSV:
-
 http://togeojson.com
 1- Save ODS file as a CSV comma separated file
 2- Copypaste the content on ToGeoJson
 
 
 FORMATTING AND TESTING GEOJSON FILE:
-
 http://jsonformatter.curiousconcept.com
