@@ -47,12 +47,12 @@ function load() {
     		marker.alt = 'adsf';
     		
     		// Size depending on "ciclos"
-    		var size = 10;
-    		if (feature.properties.ciclos >= 4) size=15;
-    		if (feature.properties.ciclos >= 7) size=20;
-    		if (feature.properties.ciclos >= 10) size=25;
-    		if (feature.properties.ciclos >= 15) size=30;
-    		if (feature.properties.ciclos >= 25) size=35;
+    		var size = 20;
+    		if (feature.properties.ciclos >= 4) size=24;
+    		if (feature.properties.ciclos >= 7) size=27;
+    		if (feature.properties.ciclos >= 10) size=29;
+    		if (feature.properties.ciclos >= 15) size=31;
+    		if (feature.properties.ciclos >= 25) size=33;
     		
     		// Icons from mapbox API: https://www.mapbox.com/developers/api/static/#markers
     		var redicon = {
@@ -73,7 +73,6 @@ function load() {
         // On success add fetched data to the map.
         //L.mapbox.featureLayer(geojson).addTo(map);
         map.featureLayer.setGeoJSON(geojson);
-        
 
         map.featureLayer.on('mouseover', function(e) {
 			var content = '<p><b>' + e.layer.feature.properties.title + '</b><br />Zikloak: ' + e.layer.feature.properties.ciclos + '</p>';
