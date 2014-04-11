@@ -1,89 +1,107 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset=utf-8 />
+<title>Lanbide Heziketako ikastetxeak</title>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Basque-vet-centres : Vocational Education and Training Centres in the Autonomous Community of the Basque Country" />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
 
-    <title>Basque-vet-centres</title>
-  </head>
+<div id='map'></div>
+<script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
 
-  <body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Tknika/basque-vet-centres">View on GitHub</a>
+  ga('create', 'UA-3914088-11', 'tknika.github.io');
+  ga('send', 'pageview');
 
-          <h1 id="project_title">Basque-vet-centres</h1>
-          <h2 id="project_tagline">Vocational Education and Training Centres in the Autonomous Community of the Basque Country</h2>
+</script>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Tknika/basque-vet-centres/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Tknika/basque-vet-centres/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<script>
+var url = 'https://api.github.com/repos/Tknika/basque-vet-centres/contents/basque-vet-centres.geojson';
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+var map = L.mapbox.map('map', 'xezpeleta.hnm05f9d')
+  .setView([43.1412, -2.4], 10);
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+function load() {
+  // Fetch just the contents of a .geojson file from GitHub by passing
+  // `application/vnd.github.v3.raw` to the Accept header
+  // As with any other AJAX request, this technique is subject to the Same Origin Policy:
+  // http://en.wikipedia.org/wiki/Same_origin_policy the server delivering the request should support CORS.
+  $.ajax({
+    headers: {
+      'Accept': 'application/vnd.github.v3.raw'
+    },
+    dataType: 'json',
+    url: url,
+    success: function(geojson) {
+    	
+    	map.featureLayer.on('layeradd', function(e) {
+    		var marker = e.layer,
+    			feature = marker.feature;
+    		
+    		// Trying to remove "alt" => it doesn't work
+    		marker.title = 'asdf';
+    		marker.alt = 'adsf';
+    		
+    		// Size depending on "ciclos"
+    		var size = 20;
+    		if (feature.properties.ciclos >= 4) size=24;
+    		if (feature.properties.ciclos >= 7) size=27;
+    		if (feature.properties.ciclos >= 10) size=29;
+    		if (feature.properties.ciclos >= 15) size=31;
+    		if (feature.properties.ciclos >= 25) size=33;
+    		
+    		// Icons from mapbox API: https://www.mapbox.com/developers/api/static/#markers
+    		var redicon = {
+    			"iconUrl": "http://api.tiles.mapbox.com/v3/marker/pin-l-building+f44.png",
+    			"iconSize": [size, size*3-size/2]
+    		}
+    		
+    		var blueicon = {
+    			"iconUrl": "http://api.tiles.mapbox.com/v3/marker/pin-l-building+3AF.png",
+    			"iconSize": [size, size*3-size/2]
+    		}
+    		
+    		if (feature.properties.centro_dependencia == "HEZKUNTZA SAILA") marker.setIcon(L.icon(redicon));
+    		if (feature.properties.centro_dependencia == "BESTE PUBLIKO") marker.setIcon(L.icon(redicon));
+    		if (feature.properties.centro_dependencia == "PRIBATUA") marker.setIcon(L.icon(blueicon));
+    	});
+    	
+        // On success add fetched data to the map.
+        //L.mapbox.featureLayer(geojson).addTo(map);
+        map.featureLayer.setGeoJSON(geojson);
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        map.featureLayer.on('mouseover', function(e) {
+			var content = '<p><b>' + e.layer.feature.properties.title + '</b><br />Zikloak: ' + e.layer.feature.properties.ciclos + '</p>';
+			e.layer.bindPopup(content, {
+				closeButton: false
+			});
+        	e.layer.openPopup();
+        });
+		
+        map.featureLayer.on('mouseout', function(e) {
+        	e.layer.closePopup();
+        });
+    }
+  });
+}
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+$(load);
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+</script>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Basque-vet-centres maintained by <a href="https://github.com/Tknika">Tknika</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-3914088-11");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-
-  </body>
+</body>
 </html>
