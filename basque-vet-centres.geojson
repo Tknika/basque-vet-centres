@@ -24,7 +24,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":4
+            "ciclos":"4"
          }
       },
       {
@@ -39,7 +39,7 @@
          "properties":{
             "centro_codigo":"10137",
             "centro_nombre":"IES (ITS) CIUDAD JARDIN (ITB) BHI",
-            "title":"Ciudad Jardín",
+            "title":"Ciudad Jard&iacute;n",
             "centro_direccion":"ALAVA 39",
             "centro_municipio":"VITORIA-GASTEIZ",
             "centro_provincia":"ARABA",
@@ -50,7 +50,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":10
+            "ciclos":"10"
          }
       },
       {
@@ -76,33 +76,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":15
-         }
-      },
-      {
-         "type":"Feature",
-         "geometry":{
-            "type":"Point",
-            "coordinates":[
-               -2.8288499999999885,
-               42.95777
-            ]
-         },
-         "properties":{
-            "centro_codigo":"10157",
-            "centro_nombre":"IES MURGUIA BHI",
-            "title":"Murgia",
-            "centro_direccion":"DOMINGO DE SAUTU Z/G",
-            "centro_municipio":"ZUIA",
-            "centro_provincia":"ARABA",
-            "centro_cp":"1130",
-            "centro_telefono":"945430228",
-            "centro_fax":"945430226",
-            "centro_dependencia":"HEZKUNTZA SAILA",
-            "marker-color":"63b6e5",
-            "marker-symbol":"building",
-            "marker-size":"medium",
-            "ciclos":4
+            "ciclos":"15"
          }
       },
       {
@@ -128,7 +102,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":4
+            "ciclos":"4"
          }
       },
       {
@@ -154,7 +128,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -180,7 +154,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":33
+            "ciclos":"33"
          }
       },
       {
@@ -206,7 +180,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":5
+            "ciclos":"5"
          }
       },
       {
@@ -221,7 +195,7 @@
          "properties":{
             "centro_codigo":"10296",
             "centro_nombre":"IES (ITS) CONSTRUCCION (ITB) BHI",
-            "title":"Construcción Vitoria",
+            "title":"Construcci&oacute;n Vitoria",
             "centro_direccion":"AV. DE LOS HUETOS 33",
             "centro_municipio":"VITORIA-GASTEIZ",
             "centro_provincia":"ARABA",
@@ -232,7 +206,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":3
+            "ciclos":"3"
          }
       },
       {
@@ -258,7 +232,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":6
+            "ciclos":"6"
          }
       },
       {
@@ -284,7 +258,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -310,7 +284,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -336,7 +310,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":10
+            "ciclos":"10"
          }
       },
       {
@@ -362,7 +336,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":3
+            "ciclos":"3"
          }
       },
       {
@@ -388,7 +362,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":10
+            "ciclos":"10"
          }
       },
       {
@@ -414,7 +388,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":10
+            "ciclos":"10"
          }
       },
       {
@@ -440,7 +414,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":3
+            "ciclos":"3"
          }
       },
       {
@@ -455,7 +429,7 @@
          "properties":{
             "centro_codigo":"12456",
             "centro_nombre":"CPES MON. GOI ESK.POLT.J.M.ARIZ.,S.COP BHIP",
-            "title":"Mondragón Goi Eskola",
+            "title":"Mondrag&oacute;n Goi Eskola",
             "centro_direccion":"LORAMENDI 4",
             "centro_municipio":"ARRASATE",
             "centro_provincia":"GIPUZKOA",
@@ -466,7 +440,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -482,8 +456,8 @@
             "centro_codigo":"12462",
             "centro_nombre":"CPES ETEO L.H.B.E. BHIP",
             "title":"ETEO",
-            "centro_direccion":"LARRAÑA 16",
-            "centro_municipio":"OÑATI",
+            "centro_direccion":"LARRA&Ntilde;A 16",
+            "centro_municipio":"O&Ntilde;ATI",
             "centro_provincia":"GIPUZKOA",
             "centro_cp":"20560",
             "centro_telefono":"943718009",
@@ -492,7 +466,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":6
+            "ciclos":"6"
          }
       },
       {
@@ -518,7 +492,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":11
+            "ciclos":"11"
          }
       },
       {
@@ -544,7 +518,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":13
+            "ciclos":"13"
          }
       },
       {
@@ -570,7 +544,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":13
+            "ciclos":"13"
          }
       },
       {
@@ -596,7 +570,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -622,7 +596,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":6
+            "ciclos":"6"
          }
       },
       {
@@ -648,7 +622,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":12
+            "ciclos":"12"
          }
       },
       {
@@ -674,7 +648,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -689,7 +663,7 @@
          "properties":{
             "centro_codigo":"12721",
             "centro_nombre":"IES (ITS) CONSTRUCCION DONOSTIA (ITB) BHI",
-            "title":"Construcción Donostia",
+            "title":"Construcci&oacute;n Donostia",
             "centro_direccion":"CASA NAO Z/G",
             "centro_municipio":"DONOSTIA-SAN SEBASTI",
             "centro_provincia":"GIPUZKOA",
@@ -700,7 +674,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":3
+            "ciclos":"3"
          }
       },
       {
@@ -726,7 +700,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":4
+            "ciclos":"4"
          }
       },
       {
@@ -752,7 +726,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":5
+            "ciclos":"5"
          }
       },
       {
@@ -778,7 +752,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":4
+            "ciclos":"4"
          }
       },
       {
@@ -804,7 +778,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":5
+            "ciclos":"5"
          }
       },
       {
@@ -830,7 +804,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -856,7 +830,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":8
+            "ciclos":"8"
          }
       },
       {
@@ -882,7 +856,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":11
+            "ciclos":"11"
          }
       },
       {
@@ -908,7 +882,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":6
+            "ciclos":"6"
          }
       },
       {
@@ -934,7 +908,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":8
+            "ciclos":"8"
          }
       },
       {
@@ -960,7 +934,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":8
+            "ciclos":"8"
          }
       },
       {
@@ -986,7 +960,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":9
+            "ciclos":"9"
          }
       },
       {
@@ -1012,7 +986,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":17
+            "ciclos":"17"
          }
       },
       {
@@ -1038,7 +1012,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -1064,7 +1038,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":15
+            "ciclos":"15"
          }
       },
       {
@@ -1090,7 +1064,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":6
+            "ciclos":"6"
          }
       },
       {
@@ -1116,7 +1090,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":8
+            "ciclos":"8"
          }
       },
       {
@@ -1142,7 +1116,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":5
+            "ciclos":"5"
          }
       },
       {
@@ -1168,7 +1142,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -1194,7 +1168,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":9
+            "ciclos":"9"
          }
       },
       {
@@ -1220,7 +1194,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":8
+            "ciclos":"8"
          }
       },
       {
@@ -1246,7 +1220,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -1272,7 +1246,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":6
+            "ciclos":"6"
          }
       },
       {
@@ -1298,7 +1272,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":9
+            "ciclos":"9"
          }
       },
       {
@@ -1324,7 +1298,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -1350,7 +1324,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":23
+            "ciclos":"23"
          }
       },
       {
@@ -1376,7 +1350,7 @@
             "marker-color":"f86767",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
          }
       },
       {
@@ -1391,8 +1365,8 @@
          "properties":{
             "centro_codigo":"14945",
             "centro_nombre":"IES (ITS) CONSTRUCCION BIZKAIA (ITB) BHI",
-            "title":"Construcción Bizkaia",
-            "centro_direccion":"PROGRESO Z/G OIARGAN-LA PEÑA",
+            "title":"Construcci&oacute;n Bizkaia",
+            "centro_direccion":"PROGRESO Z/G OIARGAN-LA PE&Ntilde;A",
             "centro_municipio":"ARRIGORRIAGA",
             "centro_provincia":"BIZKAIA",
             "centro_cp":"48003",
@@ -1402,7 +1376,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":4
+            "ciclos":"4"
          }
       },
       {
@@ -1428,7 +1402,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":8
+            "ciclos":"8"
          }
       },
       {
@@ -1454,7 +1428,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":1
+            "ciclos":"1"
          }
       },
       {
@@ -1480,7 +1454,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":8
+            "ciclos":"8"
          }
       },
       {
@@ -1506,7 +1480,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":18
+            "ciclos":"18"
          }
       },
       {
@@ -1532,7 +1506,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":4
+            "ciclos":"4"
          }
       },
       {
@@ -1558,7 +1532,7 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":15
+            "ciclos":"15"
          }
       },
       {
@@ -1584,7 +1558,33 @@
             "marker-color":"63b6e5",
             "marker-symbol":"building",
             "marker-size":"medium",
-            "ciclos":7
+            "ciclos":"7"
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -2.842359,
+               43.352334
+            ]
+         },
+         "properties":{
+            "centro_codigo":"15108",
+            "centro_nombre":"IES MUNGIA BHI",
+            "title":"Mungia",
+            "centro_direccion":"Aita Elorriaga 22",
+            "centro_municipio":"Mungia",
+            "centro_provincia":"BIZKAIA",
+            "centro_cp":"",
+            "centro_telefono":"946740600",
+            "centro_fax":"946744184",
+            "centro_dependencia":"HEZKUNTZA SAILA",
+            "marker-color":"63b6e5",
+            "marker-symbol":"building",
+            "marker-size":"medium",
+            "ciclos":"6"
          }
       }
    ]
